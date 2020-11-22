@@ -12,8 +12,28 @@ const render = function (roster) {
 
 const display = function () {
     const team = $(input).val()
-  
+    $(input).val('')
     $.get(`/nba/${team}`, function (roster) {
         render(roster)
     })
 }
+
+//why didn't this work?
+// const fetch = function () {
+//     const team = $(input).val()
+//     $(input).val('')
+//     $.get(`/nba/${team}`, function (teamRoster) {
+//         return teamRoster
+//     })
+// }
+
+// const render = function (roster) {
+//     const source = $('#roster-template').html()
+//     const template = Handlebars.compile(source)
+//     const newHTML = template({roster})
+//     $('#team-container').empty().append(newHTML)
+// }
+
+// const display = function () {
+//     render(fetch())
+//     }

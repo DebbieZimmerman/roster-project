@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Roster</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDvOFGGewQI6VSnlNykuXgCTf-GWngktQypg&usqp=CAU" type="image/icon type">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="input-container">
+        <input id="input" type="text" placeholder="What team you looking for?">
+        <button type="submit" onclick="display()">Get Roster</button>
+    </div>
+    <div id="team-container"></div>
+
+    <script id="roster-template" type="text/x-handlebars-template">
+        {{#each roster}}
+        <div class="player">
+            <div class="name-pos">
+            <div class="name">{{firstName}} {{lastName}}</div>
+            <div class="position">{{position}}</div>
+            </div>
+            <div class="number">#{{jersey}}</div>
+            <div class="picture-container"><img class="picture" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" 
+                onerror="if (this.src != 'error.jpg') this.src = 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=250&h=250'"
+                alt="Player image" width="350px" height="100%"></div>
+        </div>
+        {{/each}}
+    </script>
+
+
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <!-- <script src="player.js"></script>
+    <script src="team.js"></script> -->
+    <script src="main.js"></script>
+</body>
+
+</html>

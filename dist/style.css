@@ -1,0 +1,115 @@
+ 
+
+body {
+    background-color:#17408B;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+#input-container {
+    margin-bottom: 1vw;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: "i s";
+    grid-column-gap: 1vw;
+    font-family: Helvetica;
+}
+
+#input {
+    border-radius: 2%;
+    border-color: #C9082A;
+    border-style: ridge;
+    font-size: x-large;
+    grid-area: i;
+    font-family: Helvetica;
+}
+
+button {
+    grid-area: s;
+    display: grid;
+    font-family: Helvetica;
+    align-content: center;
+    background-color: #C9082A;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+div {
+    font-family: Helvetica;
+}
+
+#team-container {
+    display: flex;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+}
+
+.player {
+    flex: 0 1 auto;
+    padding: 3%;
+    background-color: #FFFFFF;
+    border-radius: 7%;
+    border-color: #C9082A;
+    border-style: double;
+    border-width: medium;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "a b"
+    "p p";    
+}
+
+.name-pos{
+    grid-area: a;
+    text-align: left;
+    align-self: stretch;
+} 
+
+.name {
+    
+    font-weight: 600;
+    font-size: large;
+}
+
+.number {
+    grid-area: b;
+    text-align: center;
+    align-self: stretch;
+    font-size: xx-large;
+}
+
+.position {
+    display: block;
+    text-align: left;
+    font-style: italic;
+    align-self: top;
+} 
+
+.picture-container{
+    display: inline-flex;
+    background-color: white;
+    grid-area: p;
+    display: flex;
+    align-self: baseline;
+    justify-content: center;
+    object-fit: scale-down;
+    max-width: 22vw !important;
+}
+
+.picture {
+    display: inline-flex;
+    padding-left: 1px; 
+    padding-right: 1px;  
+    justify-self: center;
+    align-self: stretch;
+    max-height: 220px;
+    max-height: 3.5fr;
+    object-fit: scale-down;
+    max-width: 22vw !important;
+}

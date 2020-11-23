@@ -21,7 +21,6 @@ app.get('/nba/:team', function (request, response) {
         let nba = JSON.parse(data.toString()).league.standard
         let teamRoster = nba.filter(element => element.teamId === teamNum && element.isActive )
                             .map(i => { return { 
-                                name: (`${i.firstName + ' ' + i.lastName}`),
                                 firstName: i.firstName,
                                 lastName: i.lastName,
                                 position: i.pos, 

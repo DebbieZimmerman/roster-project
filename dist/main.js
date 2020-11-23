@@ -16,9 +16,9 @@ const display = function () {
     $.get(`/nba/${team}`, function (roster) {
         render(roster)
     })
-}
+// }
 
-//why didn't this work?
+// // need to do in OOP
 // const fetch = function () {
 //     const team = $(input).val()
 //     $(input).val('')
